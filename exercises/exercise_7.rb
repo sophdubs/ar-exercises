@@ -9,4 +9,14 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+puts "Please provide store name:"
+print "> "
+user_answer = $stdin.gets.chomp
+
+user_store = Store.create(name: user_answer);
+if (!user_store.valid?)
+  puts "Error, missing parameter(s):"
+  user_store.errors.each {|error| puts error}
+end
+
+
