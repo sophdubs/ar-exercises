@@ -8,4 +8,4 @@ puts "----------"
 @store1 = Store.where("id = 1");
 @store2 = Store.where("id = 2");
 
-@store1.update_all(name: 'test');
+@store1.update_all(name: 'Greendale');
